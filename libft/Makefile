@@ -6,7 +6,7 @@
 #    By: maparmar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/15 20:49:48 by maparmar          #+#    #+#              #
-#    Updated: 2019/02/17 16:25:56 by maparmar         ###   ########.fr        #
+#    Updated: 2019/02/19 23:36:15 by maparmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,13 @@ FILES = ft_atoi.c \
 		ft_iswhitespace.c \
 		ft_strwhitespace.c \
 		ft_otherwhitespace.c \
-		ft_strtrim.c
+		ft_strtrim.c \
+		ft_countlength.c \
+		ft_strsplit.c \
+		ft_intlen.c \
+		ft_itoa.c \
+		ft_putchar.c \
+		ft_putstr.c
 
 OBJ = $(FILES:.c=.o)
 

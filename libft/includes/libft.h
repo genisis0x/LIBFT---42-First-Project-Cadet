@@ -6,7 +6,7 @@
 /*   By: maparmar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:25:00 by maparmar          #+#    #+#             */
-/*   Updated: 2019/02/17 19:51:37 by maparmar         ###   ########.fr       */
+/*   Updated: 2019/02/19 23:35:45 by maparmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef unsigned char	t_char;
 typedef unsigned int	t_int;
@@ -65,4 +66,9 @@ int		ft_iswhitespace(char c);
 int		ft_strwhitespace(char c);
 int		ft_otherwhitespace(char c);
 char	**ft_strsplit(char const *s, char c);
+int		ft_countlength(char const *str, char c);
+char	*ft_itoa(int n);
+int		ft_intlen(long c, int len);
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
 #endif

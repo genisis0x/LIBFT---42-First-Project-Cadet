@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maparmar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/17 19:45:23 by maparmar          #+#    #+#             */
-/*   Updated: 2019/02/19 22:58:30 by maparmar         ###   ########.fr       */
+/*   Created: 2019/02/19 21:20:58 by maparmar          #+#    #+#             */
+/*   Updated: 2019/02/19 23:25:31 by maparmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+char	*ft_itoa(int n)
 {
-	char	**res;
-	size_t	flag;
-	size_t	index;
-	size_t	i;
-	size_t	start;
+	int		len;
+	long	nb;
+	char	*res;
+	char	*str;
 
-	flag = 0;
-	i = -1;
-	index = 0;
-	start = 0;
-	res = (char **)ft_memalloc(sizeof(char *) * (ft_countlength(s, c) + 1));
-	if (!res || !s)
+	str = "0123456789";
+	len = n < 0 ? 1 : 0;
+	nb = n < 0 ? -(long)n : n;
+	len = ft_intlen(nb, len);
+	len = (n == 0) ? 1 : len;
+	if (!(res = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	while (s[++i])
+	if (n == 0)
+		res[0] = '0';
+	res[len] = '\0';
+	nb = n < 0 ? -(long)n : n;
+	while (nb > 0)
 	{
-		if (s[i] == c && flag)
-			res[index++] = ft_strsub(s, start, i - start);
-		if (!flag && s[i] != c)
-			start = i;
-		flag = (s[i] == c) ? 0 : 1;
+		res[--len] = str[nb % 10];
+		nb /= 10;
 	}
-	if (flag)
-		res[index] = ft_strsub(s, start, i - start);
+	if (n < 0)
+		res[0] = '-';
 	return (res);
 }

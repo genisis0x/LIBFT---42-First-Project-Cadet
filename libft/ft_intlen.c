@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countlength.c                                   :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maparmar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/19 17:10:50 by maparmar          #+#    #+#             */
-/*   Updated: 2019/02/19 23:16:54 by maparmar         ###   ########.fr       */
+/*   Created: 2019/02/19 23:01:46 by maparmar          #+#    #+#             */
+/*   Updated: 2019/02/19 23:24:36 by maparmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		ft_countlength(char const *str, char c)
+int	ft_intlen(long c, int len)
 {
-	int i;
-	int flag;
-	int count;
+	int base;
 
-	i = 0;
-	flag = 0;
-	count = 0;
-	while (*str)
+	base = 10;
+	while (c > 0)
 	{
-		if (!flag && *str != c)
-		{
-			count++;
-		}
-		flag = (str[i] == c) ? 0 : 1;
-		str++;
+		c /= base;
+		len++;
 	}
-	return (count);
+	return (len);
 }

@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countlength.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maparmar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/19 17:10:50 by maparmar          #+#    #+#             */
-/*   Updated: 2019/02/19 23:16:54 by maparmar         ###   ########.fr       */
+/*   Created: 2019/02/19 23:31:52 by maparmar          #+#    #+#             */
+/*   Updated: 2019/02/19 23:34:05 by maparmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		ft_countlength(char const *str, char c)
+void	ft_putstr(char const *s)
 {
-	int i;
-	int flag;
-	int count;
-
-	i = 0;
-	flag = 0;
-	count = 0;
-	while (*str)
+	while (*s != '\0')
 	{
-		if (!flag && *str != c)
-		{
-			count++;
-		}
-		flag = (str[i] == c) ? 0 : 1;
-		str++;
+		ft_putchar(*s++);
 	}
-	return (count);
 }

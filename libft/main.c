@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countlength.c                                   :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maparmar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/19 17:10:50 by maparmar          #+#    #+#             */
-/*   Updated: 2019/02/19 23:16:54 by maparmar         ###   ########.fr       */
+/*   Created: 2019/02/19 21:39:43 by maparmar          #+#    #+#             */
+/*   Updated: 2019/02/19 21:40:08 by maparmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
-
-int		ft_countlength(char const *str, char c)
+#include <stdio.h>
+int main (int ac, char **av)
 {
-	int i;
-	int flag;
-	int count;
-
-	i = 0;
-	flag = 0;
-	count = 0;
-	while (*str)
+	char *r;
+	if (ac == 2)
 	{
-		if (!flag && *str != c)
-		{
-			count++;
-		}
-		flag = (str[i] == c) ? 0 : 1;
-		str++;
+		r = ft_itoa (ft_atoi(av[1]));
+		printf("%s", r);
 	}
-	return (count);
+	return (0);
 }
