@@ -1,8 +1,18 @@
-# 42-School- Silicon Valley
-Repository is to put my stuff and the exercises done by me on the 42 school in the month of January 2019 for the piscine intense course.
 
-Hope you will find helpfull and if you have a cool approach or questions, Feel free to discuss and send me the solutions.
+# LIBFT---42 School-First-Project-Cadet
 
+Implementation of some of the Standard C Library functions including some additional ones.
 
-Best tip of the life - There is no substitute for the Hard Work in the field of programming. 
-# LIBFT---42-First-Project-Cadet
+TOC
+* What is libft?
+* What's in it?
+ * How does it work?
+* How do I use the library?
+* How do I test it? How do I test my own implementations?
+* To test the code in this repo
+* To test your own code
+* Example usage
+* What is libft?
+Libft is an first individual project as a cadet at 42 that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
+
+Disclaimer: Reinventing the wheel is bad, 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.
