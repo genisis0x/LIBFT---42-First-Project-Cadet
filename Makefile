@@ -6,13 +6,12 @@
 #    By: maparmar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/15 20:49:48 by maparmar          #+#    #+#              #
-#    Updated: 2019/02/20 22:47:12 by maparmar         ###   ########.fr        #
+#    Updated: 2019/02/21 15:41:15 by maparmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra -I $(INCLUDES)
-INCLUDES = includes/libft.h
+INCLUDES = libft.h
 FILES = ft_atoi.c \
 		ft_bzero.c \
 		ft_isalnum.c \
