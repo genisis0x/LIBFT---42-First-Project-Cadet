@@ -9,7 +9,7 @@ Libft is an first individual project as a cadet at 42 that requires us to re-cre
 #### Disclaimer: 
 Reinventing the wheel is bad, 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.
 
-#### <kbd>:skull:</kbd> Below functions are made in my libft:
+#### <kbd>:skull:</kbd> Below functions are Implemented in my libft library:
 >>
    ft_atoi.c \
 		ft_bzero.c \
