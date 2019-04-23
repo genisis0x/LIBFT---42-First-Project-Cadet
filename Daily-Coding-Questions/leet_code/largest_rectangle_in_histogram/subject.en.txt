@@ -1,0 +1,4 @@
+84. Largest Rectangle in Histogram
+#### Hard
+
+https://github.com/Manmeet2018/Daily-Coding-Questions/wiki
